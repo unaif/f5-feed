@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>F5 Distributed Cloud — Feed sanitizado</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    max-width: 720px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    color: #1a1a1a;
+    line-height: 1.55;
+  }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; }
+  code {
+    background: #f3f3f3;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  ul { padding-left: 1.2rem; }
+  li { margin: 0.25rem 0; }
+  .meta { color: #666; font-size: 0.88rem; margin-top: 2rem; }
+  a { color: #0366d6; }
+</style>
+</head>
+<body>
+<h1>F5 Distributed Cloud — Feed sanitizado</h1>
+<p class="meta">Endpoint público para consumir como External Dynamic List (Palo Alto) o External Threat Feed (FortiGate).</p>
+
+<p>
+  <strong>Origen:</strong>
+  <a href="https://docs.cloud.f5.com/docs-v2/downloads/platform/reference/network-cloud-ref/ips-domains.txt">F5 docs.cloud</a><br>
+  <strong>Refresco:</strong> cada hora vía GitHub Actions.<br>
+  <strong>Formato:</strong> una entrada por línea, sin comentarios, sin cabeceras.
+</p>
+
+<h2>Feeds combinados (uso típico)</h2>
+<ul>
+  <li><a href="f5_ipv4.txt"><code>f5_ipv4.txt</code></a> — IPs y CIDRs IPv4</li>
+  <li><a href="f5_fqdns.txt"><code>f5_fqdns.txt</code></a> — FQDNs y wildcards</li>
+</ul>
+
+<h2>Feeds granulares</h2>
+<ul>
+  <li><a href="f5_ipv4_hosts.txt"><code>f5_ipv4_hosts.txt</code></a> — solo /32</li>
+  <li><a href="f5_ipv4_cidrs.txt"><code>f5_ipv4_cidrs.txt</code></a> — solo redes</li>
+  <li><a href="f5_fqdns_only.txt"><code>f5_fqdns_only.txt</code></a> — solo FQDNs</li>
+  <li><a href="f5_wildcards.txt"><code>f5_wildcards.txt</code></a> — solo wildcards</li>
+</ul>
+
+<h2>Metadatos</h2>
+<ul>
+  <li><a href="meta.json"><code>meta.json</code></a> — timestamp del último sync y conteos</li>
+</ul>
+
+<p class="meta">Sin garantías. Uso bajo responsabilidad propia.</p>
+</body>
+</html>
