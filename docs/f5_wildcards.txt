@@ -1,0 +1,7 @@
+*.amazonaws.com
+*.azure.com
+*.blob.core.windows.net
+*.gcr.io
+*.microsoftonline.com
+*.ves.volterra.io
+*.volterra.io
