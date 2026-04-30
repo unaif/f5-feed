@@ -1,0 +1,46 @@
+name: Sync F5 feed
+
+on:
+  schedule:
+    # Cada hora al minuto :17 para evitar la avalancha de los :00
+    - cron: '17 * * * *'
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/parse.py'
+      - '.github/workflows/sync.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-feed
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run parser
+        run: python3 scripts/parse.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "feed-bot"
+          git config user.email "feed-bot@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "chore: update F5 feed $(date -u +%FT%TZ)"
+            git push
+          fi
