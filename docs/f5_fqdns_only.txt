@@ -19,6 +19,15 @@ fr4-fra-nodes.re.ves.volterra.io
 gcr.download.volterra.io
 gcr.io
 hk2-hkg-nodes.re.ves.volterra.io
+ibd-mobileapac.fastcache.net
+ibd-mobileapac2.fastcache.net
+ibd-mobileapac3.fastcache.net
+ibd-mobileemea.fastcache.net
+ibd-mobileemea2.fastcache.net
+ibd-mobileemea3.fastcache.net
+ibd-mobilelatm.fastcache.net
+ibd-mobileme.fastcache.net
+ibd-mobileus.fastcache.net
 ibd-webapac.fastcache.net
 ibd-webemea.fastcache.net
 ibd-webemea2.fastcache.net
