@@ -1,10 +1,10 @@
 {
   "source": "https://docs.cloud.f5.com/docs-v2/downloads/platform/reference/network-cloud-ref/ips-domains.txt",
-  "fetched_at": "2026-11-08T16:02:53+00:00",
+  "fetched_at": "2026-11-08T20:34:14+00:00",
   "counts": {
     "ipv4_hosts": 53,
-    "ipv4_cidrs": 112,
-    "ipv4_total": 165,
+    "ipv4_cidrs": 116,
+    "ipv4_total": 169,
     "ipv6_hosts": 0,
     "ipv6_cidrs": 0,
     "fqdns": 72,
